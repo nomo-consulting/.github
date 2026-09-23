@@ -1,6 +1,6 @@
 name: Solution Design
 description: Define an architecture, implementation approach, or consequential technical decision.
-# Add `type: Solution Design` after the organization issue type is created.
+type: "Solution Design"
 body:
   - type: markdown
     attributes:
