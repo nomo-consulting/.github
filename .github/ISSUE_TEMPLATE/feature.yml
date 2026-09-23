@@ -1,0 +1,79 @@
+name: Feature
+description: Propose a new user-facing or operational capability.
+type: feature
+body:
+  - type: dropdown
+    id: repository-outcome
+    attributes:
+      label: Expected repository outcome
+      options:
+        - Code or tests
+        - Context, documentation, or decision record
+        - Repository configuration, dependencies, CI/CD, templates, or workflows
+        - Operational capability with durable evidence
+        - Other justified exception
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Describe the capability that should exist when this feature is complete.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and value
+      description: Explain the user, business, or operational need.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the behavior and repository areas included.
+      placeholder: |
+        - Add...
+        - Update...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Provide verifiable completion conditions.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Describe tests, demonstrations, or other evidence required from the resolving PR.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List related issues, required inputs, systems, or external dependencies.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link relevant SOW, context, designs, or research.
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Record exclusions only when they protect the feature boundary.
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Duplicate check
+      options:
+        - label: I searched open and closed issues for an existing equivalent.
+          required: true

@@ -1,0 +1,91 @@
+name: Bug
+description: Report unintended or incorrect behavior that requires a repository change.
+type: bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, secrets, or sensitive client data. Redact logs and screenshots before attaching them.
+  - type: dropdown
+    id: repository-outcome
+    attributes:
+      label: Expected repository outcome
+      options:
+        - Code or tests
+        - Context or documentation correction
+        - Repository configuration, dependency, CI/CD, template, or workflow correction
+        - Operational correction with durable evidence
+        - Other justified exception
+    validations:
+      required: true
+  - type: textarea
+    id: current-behavior
+    attributes:
+      label: Current behavior
+      description: Describe what happens now and its impact.
+    validations:
+      required: true
+  - type: textarea
+    id: expected-behavior
+    attributes:
+      label: Expected behavior
+      description: Describe the correct outcome.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction or evidence
+      description: Provide minimal reproduction steps or redacted evidence.
+      placeholder: |
+        1. ...
+        2. ...
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Identify the affected repository areas and intended correction boundary.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Provide verifiable conditions for considering the bug fixed.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Describe regression tests and other evidence required from the resolving PR.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List related issues, systems, or required inputs.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link relevant incidents, context, logs, designs, or prior changes.
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Record exclusions only when they protect the issue boundary.
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Duplicate check
+      options:
+        - label: I searched open and closed issues for an existing equivalent.
+          required: true

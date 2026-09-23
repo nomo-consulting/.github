@@ -1,0 +1,85 @@
+name: Task
+description: Propose a documentation, context, configuration, maintenance, or operational outcome.
+type: task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Strongly prefer work that produces a versioned repository change. Operational exceptions are allowed when the outcome and evidence are explicit.
+  - type: dropdown
+    id: repository-outcome
+    attributes:
+      label: Expected repository outcome
+      description: Select the closest expected result.
+      options:
+        - Code or tests
+        - Context, documentation, or decision record
+        - Repository configuration, dependencies, CI/CD, templates, or workflows
+        - Operational outcome with durable evidence
+        - Other justified exception
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: Describe the concrete result expected from this task.
+      placeholder: The repository or operation will...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain why this outcome is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: List the work included in this task.
+      placeholder: |
+        - Update...
+        - Document...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Provide verifiable completion conditions.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Describe the tests or evidence required to prove completion.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List related issues, required inputs, systems, or external dependencies.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link relevant SOW, context, designs, or supporting evidence.
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Record exclusions only when they protect the task boundary.
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Duplicate check
+      options:
+        - label: I searched open and closed issues for an existing equivalent.
+          required: true

@@ -1,0 +1,83 @@
+name: Solution Design
+description: Define an architecture, implementation approach, or consequential technical decision.
+# Add `type: Solution Design` after the organization issue type is created.
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A Solution Design issue must produce a versioned architecture, design, or decision artifact.
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Design outcome
+      description: State the decision or design artifact this issue must produce.
+    validations:
+      required: true
+  - type: input
+    id: artifact-path
+    attributes:
+      label: Expected artifact path
+      description: Provide the proposed repository path for the design or decision artifact.
+      placeholder: context/solution-design/...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain the problem, affected users or systems, and why a design decision is needed.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Constraints
+      description: Record approved scope, compatibility, security, schedule, cost, and operational constraints.
+    validations:
+      required: true
+  - type: textarea
+    id: options
+    attributes:
+      label: Options to evaluate
+      description: List known approaches or state how alternatives will be discovered.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance criteria
+      description: Define the evidence and decisions required for design approval.
+      placeholder: |
+        - [ ] ...
+        - [ ] ...
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: Describe reviews, prototypes, or checks required before accepting the design.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: List related issues, required inputs, systems, or external dependencies.
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link relevant SOW, canonical context, research, or existing designs.
+  - type: textarea
+    id: out-of-scope
+    attributes:
+      label: Out of scope
+      description: Record exclusions only when they protect the design boundary.
+  - type: checkboxes
+    id: duplicate-check
+    attributes:
+      label: Duplicate check
+      options:
+        - label: I searched open and closed issues for an existing equivalent.
+          required: true
